@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Entrar</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .form-login {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .campo-form {
+        margin-bottom: 20px;
+      }
+
+      .campo-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+
+      .campo-form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+      <h1 class="titulo-pagina">Conecta Voluntário</h1>
+    </header>
+
+    <nav>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+
+    <main>
+      <h2 class="trabalhos-recentes">Entre com sua conta ou Cadastre-se</h2>
+
+      <!-- Seção principal de login -->
+      <section class="login" id="login">
+        <div class="container">
+          <!-- Lado esquerdo - Imagem -->
+          <div class="img-entrar-cadastro">
+            <img src="Imagens/img_entrar_cadastro.png" />
+          </div>
+
+          <!-- Lado direito - Formulário de login -->
+          <div class="lado-direito">
+            <h1>LOGIN DO USUÁRIO</h1>
+            <p class="texto-subtitulo">
+              Entre com seus dados para acessar sua conta
+            </p>
+
+            <!-- Formulário com placeholders e labels alinhados -->
+            <form action="#" method="post" class="form-login">
+              <div class="campo-form">
+                <label for="email">E-mail:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Digite seu e-mail"
+                />
+              </div>
+
+              <div class="campo-form">
+                <label for="senha">Senha:</label>
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  required
+                  placeholder="Digite sua senha"
+                />
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <button type="submit" style="padding: 10px 20px">Entrar</button>
+
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <span>Ou</span>
+                  <a
+                    href="#"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      text-decoration: none;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                      padding: 8px 12px;
+                      border-radius: 6px;
+                    "
+                  >
+                    <img
+                      src="Imagens/logogoogle.png.png"
+                      alt="Google login"
+                      width="20"
+                      height="20"
+                    />
+                    <span
+                      style="color: #333; cursor: pointer"
+                      onclick="window.location.href='index.html'"
+                    >
+                      Entrar com Google
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </form>
+
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="baixe-nosso-app">
+        <p class="titulo-footer">Baixe nosso aplicativo</p>
+        <div class="botoes-footer">
+          <button class="app-link">
+            <img src="Imagens/logo_apple.png" alt="Apple" class="icon-app" />
+            APPLE STORE
+          </button>
+          <button class="app-link">
+            <img
+              src="Imagens/googleplay.png"
+              alt="Google Play"
+              class="icon-app"
+            />
+            GOOGLE PLAY
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-centro">
+        <img src="Imagens/logo_sem_fundo.png" alt="Logo_Do_Site" />
+        <p>&copy; 2025 Conecta Voluntário</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach((link) => {
+          const linkHref = link.getAttribute("href");
+          if (linkHref === currentPage) {
+            link.classList.add("ativo");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
